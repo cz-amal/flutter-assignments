@@ -36,7 +36,7 @@ class _TestPageState extends State<TestPage> {
                   ),
                 ],
               ),
-              const SizedBox(
+              SizedBox(
                 width: 90,
               ),
               Row(

@@ -4,34 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18a4b03a-6124-4549-bc29-fbdbefbf32bf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter-assignment-2/lib/assets/icons/facebook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter-assignment-2/lib/assets/icons/github.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter-assignment-2/lib/assets/icons/instagram.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter-assignment-2/lib/assets/icons/pinterest.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter-assignment-2/lib/assets/icons/twitter.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter-assignment-2/lib/assets/images/background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter-assignment-2/lib/assets/images/profile-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter-assignment-2/lib/assets/images/profile-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter-assignment-2/lib/assets/images/profile-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter-assignment-2/lib/assets/images/profile-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter-assignment-2/lib/assets/images/profile-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter-assignment-2/lib/assets/images/profile-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter-assignment-2/lib/assets/images/profile.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter-assignment-2/lib/components/avatar-bar.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter-assignment-2/lib/components/data_bar.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter-assignment-2/lib/components/icon-bar.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter-assignment-2/lib/pages/home_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter-assignment-2/android/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/flutter-assignment-2/android/app/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter-assignment-2/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter-assignment-2/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter-assignment-2/macos/Flutter/GeneratedPluginRegistrant.swift" beforeDir="false" afterPath="$PROJECT_DIR$/flutter-assignment-2/macos/Flutter/GeneratedPluginRegistrant.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter-assignment-2/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/flutter-assignment-2/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter-assignment-2/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/flutter-assignment-2/pubspec.yaml" afterDir="false" />
-    </list>
+    <list default="true" id="18a4b03a-6124-4549-bc29-fbdbefbf32bf" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

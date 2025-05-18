@@ -24,29 +24,71 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    double screenHeight = MediaQuery.of(context).size.height;
+    double screenWidth = MediaQuery.of(context).size.width;
+    print("$screenHeight $screenWidth");
     return Scaffold(
       body: Stack(
         alignment: Alignment.center,
         children: [
-          Column(
-            children: [
-              Expanded(
-                flex: 4,
-                child: Image.asset(
-                  "lib/assets/images/background.jpg",
-                  fit: BoxFit.fitHeight,
-                ),
-              ),
+          screenWidth <= 500
+              ? Column(
+                children: [
+                  Expanded(
+                    flex: 4,
+                    child: Image.asset(
+                      "lib/assets/images/background.jpg",
+                      fit: BoxFit.fitHeight,
+                    ),
+                  ),
 
-              Expanded(
-                flex: 6,
-                child: Container(
-                  decoration: BoxDecoration(color: Colors.white),
-                ),
-              ),
-            ],
-          ),
+                  Expanded(
+                    flex: 6,
+                    child: Container(
+                      decoration: BoxDecoration(color: Colors.white),
+                    ),
+                  ),
+                ],
+              )
+              : Row(
+                children: [
+                  Expanded(
+                    flex: 5,
+                    child: Image.asset(
+                      "lib/assets/images/background.jpg",
+                      fit: BoxFit.cover,
+                      height: double.infinity,
+                    ),
+                  ),
 
+                  Expanded(
+                    flex: 5,
+                    child: Container(
+                      decoration: BoxDecoration(color: Colors.white),
+                      child: Column(
+                        children: [
+
+                          const SizedBox(height: 50),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            spacing: 50,
+                            children: [
+                              DataBar(title: "240", subtitle: "FOLLOWING"),
+                              DataBar(title: "24K", subtitle: "FOLLOWER"),
+                            ],
+                          ),
+                          const SizedBox(height: 30),
+                          AvatarBar(),
+                          const SizedBox(height: 40),
+
+                        ],
+                      ),
+
+                    ),
+                  ),
+                ],
+              ),
+          screenWidth <= 500 ?
           Positioned(
             height: 600,
             width: 400,
@@ -122,9 +164,80 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
+          ):
+          Positioned(
+            left: 20,
+            height: 400,
+            width: 400,
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8),
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey,
+                    spreadRadius: 0.5,
+                    blurRadius: 2,
+                  ),
+                ],
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const SizedBox(height: 150),
+                  Text(
+                    "Eastin Arafat",
+                    style: GoogleFonts.poppins(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    "UI/UX DESIGNER",
+                    style: GoogleFonts.poppins(
+                      color: Colors.grey,
+                      fontSize: 19,
+                    ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: List.generate(imagePath.length, (index) {
+                      return IconBar(
+                        iconPath: imagePath[index],
+                        isSelected: index == selectedIndex,
+                        onPressed: () {
+                          setState(() {
+                            selectedIndex = index;
+                          });
+                        },
+                      );
+                    }),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 40),
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.blue,
+                      ),
+                      child: Text(
+                        "FOLLOW NOW",
+                        style: GoogleFonts.poppins(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+
+                ],
+              ),
+            ),
           ),
+          screenWidth <= 500 ?
           Positioned(
             top: 90,
+
             child: CircleAvatar(
               backgroundColor: Colors.blue,
               radius: 82,
@@ -133,7 +246,20 @@ class _HomePageState extends State<HomePage> {
                 backgroundImage: AssetImage("lib/assets/images/profile.jpg"),
               ),
             ),
-          ),
+          ):
+          Positioned(
+            top: 10,
+            left: 135,
+            child: CircleAvatar(
+              backgroundColor: Colors.blue,
+              radius: 82,
+              child: CircleAvatar(
+                radius: 80,
+                backgroundImage: AssetImage("lib/assets/images/profile.jpg"),
+              ),
+            ),
+          )
+
         ],
       ),
     );

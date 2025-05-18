@@ -4,24 +4,9 @@ import 'package:google_fonts/google_fonts.dart';
 class AvatarBar extends StatelessWidget {
   AvatarBar({super.key});
 
-  final List<Widget> avatars = List.generate(6, (index) {
-    return Positioned(
-      left: 70 + (index * 40),
-      child: CircleAvatar(
-        backgroundColor: Colors.white,
-        radius: 32,
-        child: CircleAvatar(
-          backgroundImage: AssetImage(
-            "lib/assets/images/profile-${index + 1}.jpg",
-          ),
-          radius: 30,
-        ),
-      ),
-    );
-  });
-
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
     return Container(
       height: 150,
       width: double.infinity,
@@ -30,7 +15,27 @@ class AvatarBar extends StatelessWidget {
         children: [
           Expanded(
             flex: 7,
-            child: Stack(alignment: Alignment.center, children: avatars),
+            child: Stack(
+              alignment: Alignment.center,
+              children: List.generate(6, (index) {
+                return Positioned(
+                  left:
+                      screenWidth <= 500
+                          ? 70 + (index * 40)
+                          : 100 + (index * 40),
+                  child: CircleAvatar(
+                    backgroundColor: Colors.white,
+                    radius: 32,
+                    child: CircleAvatar(
+                      backgroundImage: AssetImage(
+                        "lib/assets/images/profile-${index + 1}.jpg",
+                      ),
+                      radius: 30,
+                    ),
+                  ),
+                );
+              }),
+            ),
           ),
           Expanded(
             flex: 3,

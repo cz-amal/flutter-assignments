@@ -43,7 +43,7 @@ class _NewExpenseState extends State<NewExpense> {
           builder: (ctx) => CupertinoAlertDialog(
                 title: const Text('Invalid input'),
                 content: const Text(
-                    'Please make sure a valid title, amount, date and category was entered.'),
+                    'Enter a valid title, amount, date and category was entered.'),
                 actions: [
                   TextButton(
                     onPressed: () {
@@ -59,7 +59,7 @@ class _NewExpenseState extends State<NewExpense> {
         builder: (ctx) => AlertDialog(
           title: const Text('Invalid input'),
           content: const Text(
-              'Please make sure a valid title, amount, date and category was entered.'),
+              'Enter a valid title, amount, date and category was entered.'),
           actions: [
             TextButton(
               onPressed: () {

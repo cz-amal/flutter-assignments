@@ -11,6 +11,7 @@ void main() {
           Color.fromARGB(255, 2, 21, 149),
         ),
       ),
+      debugShowCheckedModeBanner: false,
     ),
   );
 }

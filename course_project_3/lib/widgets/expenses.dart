@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 import 'package:expense_tracker/widgets/new_expense.dart';
-import 'package:expense_tracker/widgets/expenses_list/expenses_list.dart';
+import 'package:expense_tracker/widgets/expenses_list.dart';
 import 'package:expense_tracker/models/expense.dart';
-import 'package:expense_tracker/widgets/chart/chart.dart';
+import 'package:expense_tracker/widgets/chart.dart';
 
 class Expenses extends StatefulWidget {
   const Expenses({super.key});
@@ -16,18 +16,7 @@ class Expenses extends StatefulWidget {
 
 class _ExpensesState extends State<Expenses> {
   final List<Expense> _registeredExpenses = [
-    Expense(
-      title: 'Flutter Course',
-      amount: 19.99,
-      date: DateTime.now(),
-      category: Category.work,
-    ),
-    Expense(
-      title: 'Cinema',
-      amount: 15.69,
-      date: DateTime.now(),
-      category: Category.leisure,
-    ),
+
   ];
 
   void _openAddExpenseOverlay() {
@@ -72,7 +61,7 @@ class _ExpensesState extends State<Expenses> {
     final width = MediaQuery.of(context).size.width;
 
     Widget mainContent = const Center(
-      child: Text('No expenses found. Start adding some!'),
+      child: Text('No expenses found.'),
     );
 
     if (_registeredExpenses.isNotEmpty) {

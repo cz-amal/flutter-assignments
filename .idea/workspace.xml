@@ -5,149 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18a4b03a-6124-4549-bc29-fbdbefbf32bf" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/course_project_5/lib/data/categories.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_project_5/lib/main.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_project_5/lib/models/category.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_project_5/lib/models/grocery_item.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_project_5/lib/widgets/grocery_list.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_project_5/lib/widgets/new_item.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course_project_5/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/.metadata" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/.metadata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/analysis_options.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/analysis_options.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/android/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/android/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/android/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/android/app/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/android/app/src/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/android/app/src/debug/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/android/app/src/main/kotlin/com/example/coure_project_2/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/android/app/src/main/kotlin/com/example/coure_project_2/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/android/app/src/main/res/drawable-v21/launch_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/android/app/src/main/res/drawable-v21/launch_background.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/android/app/src/main/res/drawable/launch_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/android/app/src/main/res/drawable/launch_background.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/android/app/src/main/res/values-night/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/android/app/src/main/res/values-night/styles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/android/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/android/app/src/main/res/values/styles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/android/app/src/profile/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/android/app/src/profile/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/android/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/android/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/android/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/android/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/android/settings.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/Flutter/AppFrameworkInfo.plist" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/Flutter/AppFrameworkInfo.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/Flutter/Debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/Flutter/Debug.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/Flutter/Release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/Flutter/Release.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/Runner.xcworkspace/contents.xcworkspacedata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/Runner/AppDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/Runner/AppDelegate.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@3x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/Runner/Base.lproj/LaunchScreen.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/Runner/Base.lproj/LaunchScreen.storyboard" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/Runner/Base.lproj/Main.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/Runner/Base.lproj/Main.storyboard" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/Runner/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/Runner/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/Runner/Runner-Bridging-Header.h" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/Runner/Runner-Bridging-Header.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/ios/RunnerTests/RunnerTests.swift" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/ios/RunnerTests/RunnerTests.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/lib/answer_button.dart" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/lib/answer_button.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/lib/assets/images/quiz-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/lib/assets/images/quiz-logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/lib/data/questions.dart" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/lib/data/questions.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/lib/models/quiz_question.dart" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/lib/models/quiz_question.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/lib/questions_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/lib/pages/questions_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/lib/questions_summary/question_identifier.dart" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/lib/questions_summary/question_identifier.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/lib/questions_summary/questions_summary.dart" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/lib/questions_summary/questions_summary.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/lib/questions_summary/summary_item.dart" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/lib/questions_summary/summary_item.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/lib/quiz.dart" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/lib/quiz.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/lib/results_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/lib/pages/results_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/lib/start_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/lib/pages/start_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/linux/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/linux/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/linux/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/linux/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/linux/flutter/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/linux/flutter/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/linux/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/linux/flutter/generated_plugin_registrant.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/linux/flutter/generated_plugin_registrant.h" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/linux/flutter/generated_plugin_registrant.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/linux/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/linux/flutter/generated_plugins.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/linux/runner/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/linux/runner/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/linux/runner/main.cc" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/linux/runner/main.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/linux/runner/my_application.cc" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/linux/runner/my_application.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/linux/runner/my_application.h" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/linux/runner/my_application.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/macos/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/macos/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/macos/Flutter/Flutter-Debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/macos/Flutter/Flutter-Debug.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/macos/Flutter/Flutter-Release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/macos/Flutter/Flutter-Release.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/macos/Flutter/GeneratedPluginRegistrant.swift" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/macos/Flutter/GeneratedPluginRegistrant.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/macos/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/macos/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/macos/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/macos/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/macos/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/macos/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/macos/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/macos/Runner.xcworkspace/contents.xcworkspacedata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/macos/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/macos/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/macos/Runner/AppDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/macos/Runner/AppDelegate.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_1024.png" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_1024.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_128.png" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_128.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_16.png" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_16.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_256.png" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_256.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_32.png" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_32.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_512.png" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_512.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_64.png" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_64.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/macos/Runner/Base.lproj/MainMenu.xib" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/macos/Runner/Base.lproj/MainMenu.xib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/macos/Runner/Configs/AppInfo.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/macos/Runner/Configs/AppInfo.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/macos/Runner/Configs/Debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/macos/Runner/Configs/Debug.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/macos/Runner/Configs/Release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/macos/Runner/Configs/Release.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/macos/Runner/Configs/Warnings.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/macos/Runner/Configs/Warnings.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/macos/Runner/DebugProfile.entitlements" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/macos/Runner/DebugProfile.entitlements" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/macos/Runner/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/macos/Runner/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/macos/Runner/MainFlutterWindow.swift" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/macos/Runner/MainFlutterWindow.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/macos/Runner/Release.entitlements" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/macos/Runner/Release.entitlements" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/macos/RunnerTests/RunnerTests.swift" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/macos/RunnerTests/RunnerTests.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/test/widget_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/test/widget_test.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/web/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/web/favicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/web/icons/Icon-192.png" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/web/icons/Icon-192.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/web/icons/Icon-512.png" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/web/icons/Icon-512.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/web/icons/Icon-maskable-192.png" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/web/icons/Icon-maskable-192.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/web/icons/Icon-maskable-512.png" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/web/icons/Icon-maskable-512.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/web/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/web/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/web/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/windows/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/windows/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/windows/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/windows/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/windows/flutter/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/windows/flutter/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/windows/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/windows/flutter/generated_plugin_registrant.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/windows/flutter/generated_plugin_registrant.h" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/windows/flutter/generated_plugin_registrant.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/windows/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/windows/flutter/generated_plugins.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/windows/runner/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/windows/runner/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/windows/runner/Runner.rc" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/windows/runner/Runner.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/windows/runner/flutter_window.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/windows/runner/flutter_window.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/windows/runner/flutter_window.h" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/windows/runner/flutter_window.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/windows/runner/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/windows/runner/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/windows/runner/resource.h" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/windows/runner/resource.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/windows/runner/resources/app_icon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/windows/runner/resources/app_icon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/windows/runner/runner.exe.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/windows/runner/runner.exe.manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/windows/runner/utils.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/windows/runner/utils.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/windows/runner/utils.h" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/windows/runner/utils.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/windows/runner/win32_window.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/windows/runner/win32_window.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coure_project_2/windows/runner/win32_window.h" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_2/windows/runner/win32_window.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course_project_1/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_1/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course_project_1/lib/roller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_1/lib/roller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course_project_4/lib/screens/categories.dart" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_4/lib/screens/categories.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course_project_4/lib/screens/meal_details.dart" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_4/lib/screens/meal_details.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course_project_4/lib/widgets/meal_item.dart" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_4/lib/widgets/meal_item.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,6 +40,9 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2wag719ZoBrETxDTE1Umied16Y5" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -182,31 +54,30 @@
     &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;app/expense-tracker&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/amal/test_project/course_project_3&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/amal/test_project/course_project_5&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.import&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\amal\test_project\course_project_5" />
       <recent name="C:\Users\amal\test_project\course_project_3" />
       <recent name="C:\Users\amal\test_project\coure_project_2" />
       <recent name="C:\Users\amal\test_project\course_project_1" />
       <recent name="C:\Users\amal\test_project\flutter-assignment-2\lib\assets\icons" />
-      <recent name="C:\Users\amal\test_project\flutter-assignment-2\lib\assets\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\amal\test_project\course_project_2\lib\components" />
-      <recent name="C:\Users\amal\test_project\coure_project_2\lib\pages" />
-      <recent name="C:\Users\amal\test_project\course_project_3\lib\widgets" />
-      <recent name="C:\Users\amal\test_project\coure_project_2\lib" />
-      <recent name="C:\Users\amal\test_project\course_project_1\lib" />
+      <recent name="C:\Users\amal\test_project\course_project_4" />
+      <recent name="C:\Users\amal\test_project\course_project_4\lib" />
+      <recent name="C:\Users\amal\test_project\course_project_4\lib\screens" />
+      <recent name="C:\Users\amal\test_project\flutter-assignment-2" />
+      <recent name="C:\Users\amal\test_project\flutter-assignment-1" />
     </key>
   </component>
   <component name="RunManager">
@@ -225,5 +96,43 @@
       <updated>1746284936371</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="main" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

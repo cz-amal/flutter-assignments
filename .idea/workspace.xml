@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18a4b03a-6124-4549-bc29-fbdbefbf32bf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/course_project_5/lib/data/categories.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/course_project_5/lib/main.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/course_project_5/lib/models/category.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/course_project_5/lib/models/grocery_item.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/course_project_5/lib/widgets/grocery_list.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/course_project_5/lib/widgets/new_item.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/course_project_5/pubspec.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course_project_4/lib/screens/categories.dart" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_4/lib/screens/categories.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course_project_4/lib/screens/meal_details.dart" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_4/lib/screens/meal_details.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course_project_4/lib/widgets/meal_item.dart" beforeDir="false" afterPath="$PROJECT_DIR$/course_project_4/lib/widgets/meal_item.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,18 +49,18 @@
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;app/expense-tracker&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/amal/test_project/course_project_5&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/amal/test_project/course_project_6&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.import&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\amal\test_project\course_project_6" />
       <recent name="C:\Users\amal\test_project\course_project_5" />
       <recent name="C:\Users\amal\test_project\course_project_3" />
       <recent name="C:\Users\amal\test_project\coure_project_2" />
       <recent name="C:\Users\amal\test_project\course_project_1" />
-      <recent name="C:\Users\amal\test_project\flutter-assignment-2\lib\assets\icons" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\amal\test_project\course_project_4" />
@@ -134,5 +124,15 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/course_project_6/lib/widgets/places_list.dart</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

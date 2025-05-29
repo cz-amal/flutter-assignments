@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -17,6 +18,7 @@ class _AuthPageState extends State<AuthPage> {
   bool isLogin = false;
   var enteredPassword = '';
   var enteredEmail = '';
+  var enteredUserName = '';
 
   final formKey = GlobalKey<FormState>();
   void submitForm() async {
@@ -38,6 +40,11 @@ class _AuthPageState extends State<AuthPage> {
             password: enteredPassword,
           );
           logger.i(userCred);
+
+          await FirebaseFirestore.instance
+              .collection('users')
+              .doc(userCred.user!.uid)
+              .set({"username": enteredUserName, "email": enteredEmail});
         }
       } else {
         return;
@@ -122,6 +129,36 @@ class _AuthPageState extends State<AuthPage> {
                             enteredEmail = value!;
                           },
                         ),
+                        if (!isLogin) const SizedBox(height: 10),
+                        if (!isLogin)
+                          TextFormField(
+                            style: GoogleFonts.poppins(
+                              color: Color.fromARGB(255, 246, 225, 218),
+                            ),
+                            decoration: InputDecoration(
+                              label: Text(
+                                "Username",
+                                style: GoogleFonts.poppins(
+                                  fontWeight: FontWeight.bold,
+                                  color: Color.fromARGB(255, 246, 225, 218),
+                                ),
+                              ),
+                            ),
+                            keyboardType: TextInputType.name,
+                            autocorrect: false,
+                            textCapitalization: TextCapitalization.none,
+                            validator: (value) {
+                              if (value == null ||
+                                  value.trim().isEmpty ||
+                                  value.trim().length < 4) {
+                                return "username must atleast 4 characters long";
+                              }
+                              return null;
+                            },
+                            onSaved: (value) {
+                              enteredUserName = value!;
+                            },
+                          ),
                         const SizedBox(height: 10),
                         TextFormField(
                           style: GoogleFonts.poppins(

@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "138137930356",
+    "firebase_url": "https://http-test-7314c-default-rtdb.firebaseio.com",
+    "project_id": "http-test-7314c",
+    "storage_bucket": "http-test-7314c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:138137930356:android:3aa0d8525bb78123069f21",
+        "android_client_info": {
+          "package_name": "com.example.course_project_7"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkyU-iCPYII6wexEgbyRi31huaUVO3ku8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:138137930356:android:e12f518eca6272fe069f21",
+        "android_client_info": {
+          "package_name": "com.example.flutter_assignment_3"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkyU-iCPYII6wexEgbyRi31huaUVO3ku8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

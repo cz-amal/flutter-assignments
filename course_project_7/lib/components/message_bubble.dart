@@ -108,7 +108,7 @@ class MessageBubble extends StatelessWidget {
                         // Add a little line spacing to make the text look nicer
                         // when multilined.
                         height: 1.3,
-                        color: isMe ? Colors.black87 : Colors.white,
+                        color: isMe ? Colors.black87 : Colors.deepPurple,
                       ),
                       softWrap: true,
                     ),

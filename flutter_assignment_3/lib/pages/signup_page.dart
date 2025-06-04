@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:logger/logger.dart';
 
 final _firebase = FirebaseAuth.instance;
@@ -15,9 +16,12 @@ class SignupPage extends StatefulWidget {
 
 class _SignupPageState extends State<SignupPage> {
   final _formKey = GlobalKey<FormState>();
+  final _emailFocusNode = FocusNode();
+  final _passwordFocusNode = FocusNode();
+  final _confirmPasswordFocusNode = FocusNode();
   var _enteredEmail = '';
   var _enteredPassword = '';
-
+  bool isSignIn = _firebase.currentUser != null;
   void _submit() async {
     final isValid = _formKey.currentState!.validate();
     if (!isValid) {
@@ -41,6 +45,19 @@ class _SignupPageState extends State<SignupPage> {
     }
   }
 
+  submitGoogle() async {
+    final GoogleSignInAccount? gUser = await GoogleSignIn().signIn();
+    if (gUser == null) return;
+    final GoogleSignInAuthentication gAuth = await gUser.authentication;
+
+    final credential = GoogleAuthProvider.credential(
+      accessToken: gAuth.accessToken,
+      idToken: gAuth.idToken,
+    );
+
+    await _firebase.signInWithCredential(credential);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,6 +68,7 @@ class _SignupPageState extends State<SignupPage> {
             padding: const EdgeInsets.all(16.0),
             child: Column(
               children: [
+                if (isSignIn) CircularProgressIndicator(),
                 const SizedBox(height: 100),
                 Image.asset("assets/images/unlock.png", width: 150, height: 50),
                 const SizedBox(height: 50),
@@ -79,6 +97,7 @@ class _SignupPageState extends State<SignupPage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           TextFormField(
+                            focusNode: _emailFocusNode,
                             decoration: InputDecoration(
                               labelText: "Email",
                               fillColor: Colors.white,
@@ -88,6 +107,10 @@ class _SignupPageState extends State<SignupPage> {
                             autocorrect: false,
                             textCapitalization: TextCapitalization.none,
                             keyboardType: TextInputType.emailAddress,
+                            textInputAction: TextInputAction.next,
+                            onFieldSubmitted: (_) {
+                              FocusScope.of(context).requestFocus(_passwordFocusNode);
+                            },
                             validator: (value) {
                               if (value == null ||
                                   value.trim().isEmpty ||
@@ -104,6 +127,7 @@ class _SignupPageState extends State<SignupPage> {
                           ),
                           const SizedBox(height: 20),
                           TextFormField(
+                            focusNode: _passwordFocusNode,
                             decoration: InputDecoration(
                               labelText: "Password",
                               fillColor: Colors.white,
@@ -114,6 +138,10 @@ class _SignupPageState extends State<SignupPage> {
                             textCapitalization: TextCapitalization.none,
                             keyboardType: TextInputType.visiblePassword,
                             obscureText: true,
+                            textInputAction: TextInputAction.next,
+                            onFieldSubmitted: (_) {
+                              FocusScope.of(context).requestFocus(_confirmPasswordFocusNode);
+                            },
                             validator: (value) {
                               if (value == null || value.trim().isEmpty || value.length < 5) {
                                 return 'Password must be at least 5 characters long!!';
@@ -133,6 +161,7 @@ class _SignupPageState extends State<SignupPage> {
                           ),
                           const SizedBox(height: 20),
                           TextFormField(
+                            focusNode: _confirmPasswordFocusNode,
                             decoration: InputDecoration(
                               labelText: "Confirm Password",
                               fillColor: Colors.white,
@@ -143,6 +172,10 @@ class _SignupPageState extends State<SignupPage> {
                             textCapitalization: TextCapitalization.none,
                             keyboardType: TextInputType.visiblePassword,
                             obscureText: true,
+                            textInputAction: TextInputAction.done,
+                            onFieldSubmitted: (_) {
+                              _submit();
+                            },
                             validator: (value) {
                               if (value != _enteredPassword) {
                                 return 'Passwords do not match!!';
@@ -176,6 +209,35 @@ class _SignupPageState extends State<SignupPage> {
                   child: Text(
                     'I already have an account',
                     style: GoogleFonts.poppins(color: Colors.black),
+                  ),
+                ),
+                const SizedBox(height: 20),
+                Row(
+                  children: [
+                    Expanded(child: Divider(color: Colors.black, thickness: 1)),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                      child: Text('or', style: GoogleFonts.poppins(color: Colors.black)),
+                    ),
+                    Expanded(child: Divider(color: Colors.black, thickness: 1)),
+                  ],
+                ),
+                const SizedBox(height: 20),
+                ElevatedButton.icon(
+                  onPressed: () {
+                    submitGoogle();
+                  },
+                  icon: Image.asset('assets/images/google_icon.png', width: 24, height: 24),
+                  label: Text(
+                    'Sign up with Google',
+                    style: GoogleFonts.poppins(color: Colors.black),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    elevation: 4,
+                    padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 64),
+                    backgroundColor: Colors.white,
+                    side: const BorderSide(color: Colors.black, width: 1),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                   ),
                 ),
               ],

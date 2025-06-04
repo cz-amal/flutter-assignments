@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_assignment_3/pages/signup_page.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:logger/web.dart';
 
 var logger = Logger();
@@ -13,6 +14,8 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final formKey = GlobalKey<FormState>();
+    final emailFocusNode = FocusNode();
+    final passwordFocusNode = FocusNode();
     var enteredEmail = '';
     var enteredPassword = '';
 
@@ -39,6 +42,19 @@ class LoginPage extends StatelessWidget {
       }
     }
 
+    submitGoogle() async {
+      final GoogleSignInAccount? gUser = await GoogleSignIn().signIn();
+      if (gUser == null) return;
+      final GoogleSignInAuthentication gAuth = await gUser!.authentication;
+
+      final credential = GoogleAuthProvider.credential(
+        accessToken: gAuth.accessToken,
+        idToken: gAuth.idToken,
+      );
+
+      await _firebase.signInWithCredential(credential);
+    }
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
@@ -50,7 +66,6 @@ class LoginPage extends StatelessWidget {
                 const SizedBox(height: 100),
                 Image.asset("assets/images/unlock.png", width: 150, height: 50),
                 const SizedBox(height: 50),
-                // login to your page
                 Text(
                   "Login to your account",
                   style: GoogleFonts.poppins(
@@ -60,8 +75,6 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 40),
-
-                // card for login
                 Card(
                   color: Colors.white,
                   elevation: 4,
@@ -78,6 +91,7 @@ class LoginPage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           TextFormField(
+                            focusNode: emailFocusNode,
                             decoration: InputDecoration(
                               labelText: "Email",
                               fillColor: Colors.white,
@@ -87,6 +101,10 @@ class LoginPage extends StatelessWidget {
                             autocorrect: false,
                             textCapitalization: TextCapitalization.none,
                             keyboardType: TextInputType.emailAddress,
+                            textInputAction: TextInputAction.next,
+                            onFieldSubmitted: (_) {
+                              FocusScope.of(context).requestFocus(passwordFocusNode);
+                            },
                             validator: (value) {
                               if (value == null ||
                                   value.trim().isEmpty ||
@@ -101,17 +119,21 @@ class LoginPage extends StatelessWidget {
                           ),
                           const SizedBox(height: 20),
                           TextFormField(
+                            focusNode: passwordFocusNode,
                             decoration: InputDecoration(
                               labelText: "Password",
                               fillColor: Colors.white,
                               filled: true,
-
                               border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
                             ),
                             autocorrect: false,
                             textCapitalization: TextCapitalization.none,
                             keyboardType: TextInputType.emailAddress,
                             obscureText: true,
+                            textInputAction: TextInputAction.done,
+                            onFieldSubmitted: (_) {
+                              submit();
+                            },
                             validator: (value) {
                               if (value == null || value.trim().isEmpty || value.length < 5) {
                                 return 'Password must be atleast 5 characters long!!';
@@ -128,10 +150,8 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20),
-                // login button
                 ElevatedButton(
                   onPressed: submit,
-
                   style: ElevatedButton.styleFrom(
                     elevation: 4,
                     padding: EdgeInsets.symmetric(vertical: 12, horizontal: 64),
@@ -142,8 +162,6 @@ class LoginPage extends StatelessWidget {
                   ),
                   child: Text("Login", style: GoogleFonts.poppins(color: Colors.black)),
                 ),
-
-                // already have account
                 const SizedBox(height: 20),
                 TextButton(
                   onPressed: () {
@@ -154,7 +172,36 @@ class LoginPage extends StatelessWidget {
                     style: GoogleFonts.poppins(color: Colors.black),
                   ),
                 ),
-
+                const SizedBox(height: 20),
+                Row(
+                  children: [
+                    Expanded(child: Divider(color: Colors.black, thickness: 1)),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                      child: Text('or', style: GoogleFonts.poppins(color: Colors.black)),
+                    ),
+                    Expanded(child: Divider(color: Colors.black, thickness: 1)),
+                  ],
+                ),
+                const SizedBox(height: 20),
+                ElevatedButton.icon(
+                  onPressed: () {
+                    submitGoogle();
+                  },
+                  icon: Image.asset('assets/images/google_icon.png', width: 24, height: 24),
+                  label: Text(
+                    'Sign in with Google',
+                    style: GoogleFonts.poppins(color: Colors.black),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    elevation: 4,
+                    padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 64),
+                    backgroundColor: Colors.white,
+                    side: const BorderSide(color: Colors.black, width: 1),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                  ),
+                ),
+                const SizedBox(height: 20),
                 TextButton(
                   onPressed: () {},
                   child: Text('Forgot Password?', style: GoogleFonts.poppins(color: Colors.black)),

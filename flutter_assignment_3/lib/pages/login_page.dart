@@ -8,53 +8,125 @@ import 'package:logger/web.dart';
 var logger = Logger();
 final _firebase = FirebaseAuth.instance;
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    final formKey = GlobalKey<FormState>();
-    final emailFocusNode = FocusNode();
-    final passwordFocusNode = FocusNode();
-    var enteredEmail = '';
-    var enteredPassword = '';
+  State<LoginPage> createState() => _LoginPageState();
+}
 
-    void submit() async {
-      final isValid = formKey.currentState!.validate();
-      if (!isValid) {
-        return;
-      }
-      formKey.currentState!.save();
-      try {
-        final userCred = await _firebase.signInWithEmailAndPassword(
-          email: enteredEmail,
-          password: enteredPassword,
-        );
-        logger.i(userCred);
-        // Optionally navigate to another screen
-        // Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
-      } on FirebaseAuthException catch (error) {
-        logger.e(error.message);
-        ScaffoldMessenger.of(context).clearSnackBars();
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(error.message?.substring(0, 20) ?? 'Authentication failed.')),
-        );
-      }
+class _LoginPageState extends State<LoginPage> {
+  final formKey = GlobalKey<FormState>();
+  final emailFocusNode = FocusNode();
+  final passwordFocusNode = FocusNode();
+  var enteredEmail = '';
+  var enteredPassword = '';
+
+  void submit() async {
+    final isValid = formKey.currentState!.validate();
+    if (!isValid) {
+      return;
     }
-
-    submitGoogle() async {
-      final GoogleSignInAccount? gUser = await GoogleSignIn().signIn();
-      if (gUser == null) return;
-      final GoogleSignInAuthentication gAuth = await gUser!.authentication;
-
-      final credential = GoogleAuthProvider.credential(
-        accessToken: gAuth.accessToken,
-        idToken: gAuth.idToken,
+    formKey.currentState!.save();
+    try {
+      final userCred = await _firebase.signInWithEmailAndPassword(
+        email: enteredEmail,
+        password: enteredPassword,
       );
-
-      await _firebase.signInWithCredential(credential);
+      logger.i(userCred);
+      // Optionally navigate to another screen
+      // Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
+    } on FirebaseAuthException catch (error) {
+      logger.e(error.message);
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).clearSnackBars();
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(error.message?.substring(0, 20) ?? 'Authentication failed.')),
+      );
     }
+  }
 
+  void submitGoogle() async {
+    final GoogleSignInAccount? gUser = await GoogleSignIn().signIn();
+    if (gUser == null) return;
+    final GoogleSignInAuthentication gAuth = await gUser.authentication;
+
+    final credential = GoogleAuthProvider.credential(
+      accessToken: gAuth.accessToken,
+      idToken: gAuth.idToken,
+    );
+
+    await _firebase.signInWithCredential(credential);
+  }
+
+  Future<void> showPasswordResetDialog(BuildContext context) async {
+    String email = '';
+    await showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text('Reset Password', style: GoogleFonts.poppins()),
+          content: TextFormField(
+            decoration: InputDecoration(
+              labelText: 'Enter your email address',
+              border: OutlineInputBorder(),
+            ),
+            keyboardType: TextInputType.emailAddress,
+            onChanged: (value) {
+              email = value;
+            },
+          ),
+          actions: [
+            TextButton(
+              onPressed: () async {
+                if (email.trim().isNotEmpty && email.contains('@')) {
+                  try {
+                    await _firebase.sendPasswordResetEmail(email: email.trim());
+                    Navigator.of(context).pop();
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text(
+                          'If an account exists for this email, a password reset link has been sent. Please check your email.',
+                          style: GoogleFonts.poppins(),
+                        ),
+                      ),
+                    );
+                  } catch (e) {
+                    Navigator.of(context).pop();
+                    logger.e(e);
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text('Failed to send reset link.', style: GoogleFonts.poppins()),
+                      ),
+                    );
+                  }
+                } else {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text(
+                        'Please enter a valid email address.',
+                        style: GoogleFonts.poppins(),
+                      ),
+                    ),
+                  );
+                }
+              },
+              child: Text('Send', style: GoogleFonts.poppins()),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: Text('Cancel', style: GoogleFonts.poppins()),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
@@ -203,7 +275,9 @@ class LoginPage extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () async {
+                    await showPasswordResetDialog(context);
+                  },
                   child: Text('Forgot Password?', style: GoogleFonts.poppins(color: Colors.black)),
                 ),
               ],

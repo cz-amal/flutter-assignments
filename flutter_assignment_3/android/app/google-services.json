@@ -13,7 +13,12 @@
           "package_name": "com.example.course_project_7"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "138137930356-6upjpmgq6uafp53glrlqmn4ia2e7f66l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCkyU-iCPYII6wexEgbyRi31huaUVO3ku8"
@@ -21,7 +26,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "138137930356-6upjpmgq6uafp53glrlqmn4ia2e7f66l.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "138137930356-s8hn61fknan5c001rlpvms7vu2fo6jl8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.courseProject7"
+              }
+            }
+          ]
         }
       }
     },
@@ -32,7 +49,20 @@
           "package_name": "com.example.flutter_assignment_3"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "138137930356-7kedd6ve465t62pj7t54guuce2am5t4e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.flutter_assignment_3",
+            "certificate_hash": "ef154369cecf6929c4ee465b225c64897d71e3ee"
+          }
+        },
+        {
+          "client_id": "138137930356-6upjpmgq6uafp53glrlqmn4ia2e7f66l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCkyU-iCPYII6wexEgbyRi31huaUVO3ku8"
@@ -40,7 +70,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "138137930356-6upjpmgq6uafp53glrlqmn4ia2e7f66l.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "138137930356-s8hn61fknan5c001rlpvms7vu2fo6jl8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.courseProject7"
+              }
+            }
+          ]
         }
       }
     }

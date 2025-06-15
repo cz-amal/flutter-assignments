@@ -23,7 +23,9 @@ class _MusicPageState extends State<MusicPage> {
                 backgroundColor: Colors.transparent,
                 leading: IconButton(
                   padding: const EdgeInsets.only(left: 20),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
                   icon: Icon(Icons.arrow_back, color: const Color(0xFF2D264B)),
                 ),
                 title: Text(
@@ -277,11 +279,9 @@ class _MusicPageState extends State<MusicPage> {
       },
       child: Stack(
         children: [
-          // Lyrics + avatar
           SingleChildScrollView(
             child: Column(
               children: [
-                // Circular album art avatar
                 Text(
                   "Bad Guy",
                   style: GoogleFonts.poppins(

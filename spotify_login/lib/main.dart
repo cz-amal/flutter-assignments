@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_login/pages/home_page.dart';
-import 'package:spotify_login/pages/music_page.dart';
+import 'package:spotify_login/pages/loading_page.dart';
+import 'package:spotify_login/pages/mode_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,9 +9,8 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: MusicPage());
+    return MaterialApp(debugShowCheckedModeBanner: false, home: LoadingPage());
   }
 }

@@ -4,75 +4,55 @@ import 'package:spotify_login/components/music_card.dart';
 import 'package:spotify_login/components/singer_card.dart';
 import 'package:spotify_login/models/music.dart';
 import 'package:spotify_login/models/singer.dart';
+import 'package:spotify_login/pages/artist_page.dart';
+import 'package:spotify_login/pages/profile_page.dart';
 
 const Color bannerTextColor = Color(0xFFFBFBFB);
 
-class HomePage extends StatelessWidget {
+final sectionTiles = const ['News', 'Video', 'Artists', 'Podcast', 'Concerts'];
+final sectionTileColors = const [
+  Color(0xFF62CD5D),
+  Color(0xFF42C83C),
+  Color(0xFF2D264B),
+  Color(0xFF7D7D7D),
+  Color(0xFFFBFBFB),
+];
+
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
-  final sectionTiles = const ['News', 'Video', 'Artists', 'Podcast', 'Concerts'];
-  final sectionTileColors = const [
-    Color(0xFF62CD5D),
-    Color(0xFF42C83C),
-    Color(0xFF2D264B),
-    Color(0xFF7D7D7D),
-    Color(0xFFFBFBFB),
-  ];
-
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color(0xFFF2F2F2),
-      appBar: AppBar(
-        centerTitle: true,
-        backgroundColor: Colors.transparent,
-        leading: IconButton(
-          padding: EdgeInsets.only(left: 20),
-          onPressed: () {},
-          icon: Image.asset(
-            'assets/images/search.png',
-            height: 23.44,
-            width: 23.44,
-            color: const Color(0xFF2D264B),
-          ),
-        ),
+  State<HomePage> createState() => _HomePageState();
+}
 
-        title: Image.asset(
-          'assets/images/spotify-logo.png',
-          height: 33,
-          width: 108,
-          color: const Color(0xFF62CD5D),
-        ),
-        actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 20),
-            child: Image.asset(
-              'assets/images/dot-menu.png',
-              height: 23.44,
-              color: const Color(0xFF7D7D7D),
-            ),
-          ),
-        ],
-      ),
+class _HomePageState extends State<HomePage> {
+  int _selectedIndex = 0;
 
-      body: Column(
+  void _onNavTap(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
+  List<Widget> get _pages {
+    return [
+      // Home
+      Column(
         children: [
-          // green container
           Center(
             child: Padding(
-              padding: const EdgeInsets.only(top: 10),
+              padding: EdgeInsets.only(top: 10),
               child: Container(
                 height: 130,
                 width: 380,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
-                  color: const Color(0xFF42C83C),
+                  color: Color(0xFF42C83C),
                 ),
-
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 20, top: 14, bottom: 14),
+                  padding: EdgeInsets.only(left: 20, top: 14, bottom: 14),
                   child: Stack(
-                    clipBehavior: Clip.none, // Allow overflow
+                    clipBehavior: Clip.none,
                     children: [
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -111,9 +91,8 @@ class HomePage extends StatelessWidget {
               ),
             ),
           ),
-
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
             child: SizedBox(
               height: 40,
               child: ListView.builder(
@@ -121,7 +100,7 @@ class HomePage extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
                   return Padding(
-                    padding: const EdgeInsets.all(7.0),
+                    padding: EdgeInsets.all(7.0),
                     child: Text(
                       sectionTiles[index],
                       style: GoogleFonts.poppins(fontWeight: FontWeight.w500, fontSize: 20),
@@ -132,7 +111,7 @@ class HomePage extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
+            padding: EdgeInsets.symmetric(horizontal: 20),
             child: SizedBox(
               height: 255,
               child: ListView.builder(
@@ -144,9 +123,9 @@ class HomePage extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(height: 20),
+          SizedBox(height: 20),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
+            padding: EdgeInsets.symmetric(horizontal: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -161,9 +140,9 @@ class HomePage extends StatelessWidget {
               ],
             ),
           ),
-          const SizedBox(height: 20),
+          SizedBox(height: 20),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
+            padding: EdgeInsets.symmetric(horizontal: 20),
             child: SizedBox(
               height: 255,
               child: ListView.builder(
@@ -176,24 +155,115 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
-      bottomNavigationBar: Container(
-        height: 73,
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.only(
-            bottomLeft: Radius.circular(17),
-            bottomRight: Radius.circular(17),
+      // Discovery
+      Center(
+        child: Text(
+          'Discovery',
+          style: GoogleFonts.poppins(fontSize: 28, fontWeight: FontWeight.bold),
+        ),
+      ),
+      // Artist
+      ArtistPage(),
+      // Profile
+      ProfilePage(),
+    ];
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    bool showAppBar = _selectedIndex == 0 || _selectedIndex == 1;
+
+    return Scaffold(
+      backgroundColor: Color(0xFFF2F2F2),
+      appBar:
+          showAppBar
+              ? AppBar(
+                centerTitle: true,
+                backgroundColor: Colors.transparent,
+                leading: IconButton(
+                  padding: EdgeInsets.only(left: 20),
+                  onPressed: () {},
+                  icon: Image.asset(
+                    'assets/images/search.png',
+                    height: 23.44,
+                    width: 23.44,
+                    color: Color(0xFF2D264B),
+                  ),
+                ),
+                title: Image.asset(
+                  'assets/images/spotify-logo.png',
+                  height: 33,
+                  width: 108,
+                  color: Color(0xFF62CD5D),
+                ),
+                actions: [
+                  Padding(
+                    padding: EdgeInsets.only(right: 20),
+                    child: Image.asset(
+                      'assets/images/dot-menu.png',
+                      height: 23.44,
+                      color: Color(0xFF7D7D7D),
+                    ),
+                  ),
+                ],
+              )
+              : null,
+      body: _pages[_selectedIndex],
+      bottomNavigationBar: CustomBottomNavBar(selectedIndex: _selectedIndex, onTap: _onNavTap),
+    );
+  }
+}
+
+class CustomBottomNavBar extends StatelessWidget {
+  final int selectedIndex;
+  final Function(int) onTap;
+
+  const CustomBottomNavBar({Key? key, required this.selectedIndex, required this.onTap})
+    : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 73,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.only(
+          bottomLeft: Radius.circular(17),
+          bottomRight: Radius.circular(17),
+        ),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          IconButton(
+            icon: Image.asset(
+              'assets/images/home.png',
+              color: selectedIndex == 0 ? Color(0xFF1DB954) : Colors.black,
+            ),
+            onPressed: () => onTap(0),
           ),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            Image.asset('assets/images/home.png'),
-            Image.asset('assets/images/discovery.png'),
-            Image.asset('assets/images/heart.png'),
-            Image.asset('assets/images/profile.png'),
-          ],
-        ),
+          IconButton(
+            icon: Image.asset(
+              'assets/images/discovery.png',
+              color: selectedIndex == 1 ? Color(0xFF1DB954) : Colors.black,
+            ),
+            onPressed: () => onTap(1),
+          ),
+          IconButton(
+            icon: Image.asset(
+              'assets/images/heart.png',
+              color: selectedIndex == 2 ? Color(0xFF1DB954) : Colors.black,
+            ),
+            onPressed: () => onTap(2),
+          ),
+          IconButton(
+            icon: Image.asset(
+              'assets/images/profile.png',
+              color: selectedIndex == 3 ? Color(0xFF1DB954) : Colors.black,
+            ),
+            onPressed: () => onTap(3),
+          ),
+        ],
       ),
     );
   }

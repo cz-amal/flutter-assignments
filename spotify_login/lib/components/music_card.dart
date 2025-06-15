@@ -13,14 +13,12 @@ class MusicCard extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          // play icon
           Container(
             width: 37,
             height: 37,
             decoration: BoxDecoration(color: Color(0xFFE6E6E6), shape: BoxShape.circle),
             child: Image.asset("assets/images/Play.png", color: Color(0xFF555555)),
           ),
-
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             crossAxisAlignment: CrossAxisAlignment.start,

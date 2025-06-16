@@ -171,46 +171,193 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    bool showAppBar = _selectedIndex == 0 || _selectedIndex == 1;
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final isTablet = constraints.maxWidth > 600;
+        return Scaffold(
+          backgroundColor: Color(0xFFF2F2F2),
+          appBar:
+              _selectedIndex == 0 || _selectedIndex == 1
+                  ? AppBar(
+                    centerTitle: true,
+                    backgroundColor: Colors.transparent,
+                    leading: IconButton(
+                      padding: EdgeInsets.only(left: 20),
+                      onPressed: () {},
+                      icon: Image.asset(
+                        'assets/images/search.png',
+                        height: 23.44,
+                        width: 23.44,
+                        color: Color(0xFF2D264B),
+                      ),
+                    ),
+                    title: Image.asset(
+                      'assets/images/spotify-logo.png',
+                      height: 33,
+                      width: 108,
+                      color: Color(0xFF62CD5D),
+                    ),
+                    actions: [
+                      Padding(
+                        padding: EdgeInsets.only(right: 20),
+                        child: Image.asset(
+                          'assets/images/dot-menu.png',
+                          height: 23.44,
+                          color: Color(0xFF7D7D7D),
+                        ),
+                      ),
+                    ],
+                  )
+                  : null,
+          body: isTablet ? _buildTabletLayout() : _pages[_selectedIndex],
+          bottomNavigationBar: CustomBottomNavBar(selectedIndex: _selectedIndex, onTap: _onNavTap),
+        );
+      },
+    );
+  }
 
-    return Scaffold(
-      backgroundColor: Color(0xFFF2F2F2),
-      appBar:
-          showAppBar
-              ? AppBar(
-                centerTitle: true,
-                backgroundColor: Colors.transparent,
-                leading: IconButton(
-                  padding: EdgeInsets.only(left: 20),
-                  onPressed: () {},
-                  icon: Image.asset(
-                    'assets/images/search.png',
-                    height: 23.44,
-                    width: 23.44,
-                    color: Color(0xFF2D264B),
-                  ),
-                ),
-                title: Image.asset(
-                  'assets/images/spotify-logo.png',
-                  height: 33,
-                  width: 108,
-                  color: Color(0xFF62CD5D),
-                ),
-                actions: [
-                  Padding(
-                    padding: EdgeInsets.only(right: 20),
-                    child: Image.asset(
-                      'assets/images/dot-menu.png',
-                      height: 23.44,
-                      color: Color(0xFF7D7D7D),
+  Widget _buildTabletLayout() {
+    switch (_selectedIndex) {
+      case 0:
+        return SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 24.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(height: 20),
+                // Banner section with increased size for tablet
+                Center(
+                  child: Container(
+                    height: 180,
+                    width: 700,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30),
+                      color: Color(0xFF42C83C),
+                    ),
+                    child: Padding(
+                      padding: EdgeInsets.only(left: 40, top: 20, bottom: 20),
+                      child: Stack(
+                        clipBehavior: Clip.none,
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              Text(
+                                "New Album",
+                                style: GoogleFonts.poppins(fontSize: 14, color: bannerTextColor),
+                              ),
+                              Text(
+                                "Happier Than\nEver",
+                                style: GoogleFonts.poppins(
+                                  fontSize: 32,
+                                  fontWeight: FontWeight.w700,
+                                  color: bannerTextColor,
+                                ),
+                              ),
+                              Text(
+                                "Billie Ellish",
+                                style: GoogleFonts.poppins(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w500,
+                                  color: bannerTextColor,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Positioned(
+                            right: 50,
+                            top: -90,
+                            child: Image.asset('assets/images/billy.png', height: 250, width: 400),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                ],
-              )
-              : null,
-      body: _pages[_selectedIndex],
-      bottomNavigationBar: CustomBottomNavBar(selectedIndex: _selectedIndex, onTap: _onNavTap),
-    );
+                ),
+                const SizedBox(height: 30),
+                // Section tiles with increased spacing
+                SizedBox(
+                  height: 50,
+                  child: ListView.builder(
+                    itemCount: sectionTiles.length,
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) {
+                      return Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 12.0, vertical: 8),
+                        child: Text(
+                          sectionTiles[index],
+                          style: GoogleFonts.poppins(fontWeight: FontWeight.w500, fontSize: 24),
+                        ),
+                      );
+                    },
+                  ),
+                ),
+                const SizedBox(height: 30),
+                // Artists section with grid layout
+                Text(
+                  "Popular Artists",
+                  style: GoogleFonts.poppins(fontSize: 24, fontWeight: FontWeight.w700),
+                ),
+                const SizedBox(height: 20),
+                GridView.builder(
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3,
+                    childAspectRatio: 0.8,
+                    crossAxisSpacing: 16,
+                    mainAxisSpacing: 16,
+                  ),
+                  itemCount: 6,
+                  itemBuilder: (context, index) {
+                    return SingerCard(singer: singers[index % singers.length]);
+                  },
+                ),
+                const SizedBox(height: 30),
+                // Playlist section with grid layout
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Playlist",
+                      style: GoogleFonts.poppins(fontSize: 24, fontWeight: FontWeight.w700),
+                    ),
+                    Text(
+                      "See more",
+                      style: GoogleFonts.poppins(fontSize: 16, fontWeight: FontWeight.w400),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 20),
+                ListView.builder(
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  itemCount: 4,
+                  itemBuilder: (context, index) {
+                    return MusicCard(music: musics[index % musics.length]);
+                  },
+                ),
+                const SizedBox(height: 20),
+              ],
+            ),
+          ),
+        );
+      case 1:
+        return Center(
+          child: Text(
+            'Discovery',
+            style: GoogleFonts.poppins(fontSize: 32, fontWeight: FontWeight.bold),
+          ),
+        );
+      case 2:
+        return ArtistPage();
+      case 3:
+        return ProfilePage();
+      default:
+        return Container();
+    }
   }
 }
 

@@ -25,16 +25,20 @@ class _LoadingPageState extends State<LoadingPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color(0xFFF8F8F8),
-      body: Center(
-        child: Image.asset(
-          'assets/images/spotify-logo.png',
-          width: 196,
-          height: 59,
-          fit: BoxFit.cover,
-        ),
-      ),
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return Scaffold(
+          backgroundColor: const Color(0xFFF8F8F8),
+          body: Center(
+            child: Image.asset(
+              'assets/images/spotify-logo.png',
+              width: 196,
+              height: 59,
+              fit: BoxFit.cover,
+            ),
+          ),
+        );
+      },
     );
   }
 }

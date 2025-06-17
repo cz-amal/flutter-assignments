@@ -155,16 +155,16 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
-      // Discovery
+
       Center(
         child: Text(
           'Discovery',
           style: GoogleFonts.poppins(fontSize: 28, fontWeight: FontWeight.bold),
         ),
       ),
-      // Artist
+
       ArtistPage(),
-      // Profile
+
       ProfilePage(),
     ];
   }
@@ -226,7 +226,7 @@ class _HomePageState extends State<HomePage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(height: 20),
-                // Banner section with increased size for tablet
+
                 Center(
                   child: Container(
                     height: 180,
@@ -277,7 +277,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 const SizedBox(height: 30),
-                // Section tiles with increased spacing
+
                 SizedBox(
                   height: 50,
                   child: ListView.builder(
@@ -295,7 +295,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 const SizedBox(height: 30),
-                // Artists section with grid layout
+
                 Text(
                   "Popular Artists",
                   style: GoogleFonts.poppins(fontSize: 24, fontWeight: FontWeight.w700),
@@ -316,7 +316,7 @@ class _HomePageState extends State<HomePage> {
                   },
                 ),
                 const SizedBox(height: 30),
-                // Playlist section with grid layout
+
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [

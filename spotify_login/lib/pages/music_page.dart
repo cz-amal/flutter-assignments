@@ -55,7 +55,6 @@ class _MusicPageState extends State<MusicPage> {
   Widget buildTabletLayout(BoxConstraints constraints) {
     return Row(
       children: [
-        // Left side - Album Art
         Expanded(
           flex: 5,
           child: Padding(
@@ -126,7 +125,7 @@ class _MusicPageState extends State<MusicPage> {
             ),
           ),
         ),
-        // Right side - Controls and Lyrics
+
         Expanded(
           flex: 4,
           child: ConstrainedBox(
@@ -245,7 +244,6 @@ class _MusicPageState extends State<MusicPage> {
     );
   }
 
-  // Move lyrics list to be accessible by both layouts
   final lyrics = [
     "Sleepin', You're On Your Tippy Toes",
     "Creepin' Around Like No One Knows",

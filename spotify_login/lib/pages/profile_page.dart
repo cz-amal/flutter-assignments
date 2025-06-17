@@ -133,7 +133,7 @@ class ProfilePage extends StatelessWidget {
             ),
           ),
         ),
-        // Right panel - Playlists
+
         Expanded(
           flex: 3,
           child: Container(

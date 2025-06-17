@@ -146,7 +146,7 @@ class ArtistPage extends StatelessWidget {
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            // Albums section
+                           
                             Expanded(
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
